@@ -11,11 +11,13 @@ function App() {
       setData(jobs.data);
     });
   }, []);
-  console.log(data);
+console.log(data);
   return (
     <BodyWrapper>
       <div className="bg"></div>
-      <Job />
+      {data?.map((job: any) => {
+        return <Job key={job.id} job={job} />;
+      })}
     </BodyWrapper>
   );
 }

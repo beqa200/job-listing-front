@@ -5,3 +5,5 @@ const JobWrapper = styled.div`
     height: 257px;
     background-color: white;
 `
+
+export default JobWrapper;
