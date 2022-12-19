@@ -19,6 +19,7 @@ const BodyWrapper = styled.div`
     margin: -10px auto 56px;
     border-radius: 5px;
     width: calc(90% - 48px);
+    max-width: 1110px;
     padding: 20px 24px 0px;
     display: ${(props: PropsType) =>
       props.hashtagsLength == 0 ? "none" : "flex"};

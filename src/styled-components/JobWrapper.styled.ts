@@ -7,6 +7,7 @@ type PropsTypes = {
 
 const JobWrapper = styled.div`
   width: calc(90% - 48px);
+  max-width: 1110px;
   height: 240px;
   padding: 0px 24px;
   background-color: white;
@@ -16,11 +17,28 @@ const JobWrapper = styled.div`
   border-left: ${(props: PropsTypes) =>
     props.new == true && props.featured == true ? "5px solid #5CA5A5" : ""};
 
+  @media (min-width: 1300px) {
+    display: flex;
+    align-items: center;
+    height: 152px;
+  }
+
+  img {
+    width: 40px;
+    margin-top: -20px;
+
+    @media(min-width: 1300px) {
+        width: 88px;
+        height: 88px;
+        margin-top: 0px;
+    }
+  }
   .section1 {
     border-bottom: 1px solid #b7c4c4;
-    img {
-      width: 40px;
-      margin-top: -20px;
+
+    @media (min-width: 1300px) {
+      border: none;
+      margin-left: 24px;
     }
 
     .for-flex1 {
@@ -55,10 +73,13 @@ const JobWrapper = styled.div`
 
     .position {
       margin-top: 9px;
-      font-size: 15px;
+      font-size: 22px;
       color: #2b3939;
       font-weight: 700;
       cursor: pointer;
+
+    
+
       &:hover {
         color: #5ca5a5;
       }
@@ -71,6 +92,7 @@ const JobWrapper = styled.div`
       margin-top: 10px;
       width: 260px;
       padding-bottom: 15px;
+
       ul {
         display: flex;
         width: 180px;
@@ -83,9 +105,14 @@ const JobWrapper = styled.div`
   }
 
   .section2 {
-    font-size: 18px;
+    font-size: 16px;
     color: #5ca5a5;
     font-weight: 700;
+
+    
+    @media(min-width: 1300px) {
+        margin-left: 263px;
+      }
 
     p {
       margin-top: 16px;

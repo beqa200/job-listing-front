@@ -10,8 +10,9 @@ const Jobs = (props: JobPropsType) => {
 
   return (
     <JobWrapper new={props.job.new} featured={props.job.featured}>
-      <section className="section1">
         <img src={process.env.PUBLIC_URL + props.job.logo} />
+      
+      <section className="section1">
         <div className="for-flex1">
           <p className="company">{props.job.company}</p>
           <p className="new">{props.job.new == true ? "NEW!" : null}</p>
