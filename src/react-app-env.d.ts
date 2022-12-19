@@ -2,4 +2,6 @@
 
 type JobPropsType = {
   job: any;
+  setHashtags: (hashtags: String[]) => void;
+  hashtags: String[];
 };

@@ -26,7 +26,7 @@ const JobWrapper = styled.div`
     .for-flex1 {
       display: flex;
       align-items: center;
-
+      font-weight: 700;
       font-size: 14px;
       color: white;
       .company {
@@ -57,6 +57,11 @@ const JobWrapper = styled.div`
       margin-top: 9px;
       font-size: 15px;
       color: #2b3939;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover {
+        color: #5ca5a5;
+      }
     }
 
     .for-flex2 {
@@ -81,8 +86,6 @@ const JobWrapper = styled.div`
     font-size: 18px;
     color: #5ca5a5;
     font-weight: 700;
-  
-   
 
     p {
       margin-top: 16px;
@@ -91,6 +94,12 @@ const JobWrapper = styled.div`
       padding: 5px 11px 3px 8px;
       background-color: rgba(92, 165, 165, 0.1);
       border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        color: white;
+        background-color: #5ca5a5;
+      }
     }
   }
 `;

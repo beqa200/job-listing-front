@@ -2,6 +2,12 @@ import { JobWrapper } from "../styled-components";
 import { useState } from "react";
 
 const Jobs = (props: JobPropsType) => {
+  function addHash(hash: String) {
+    let copied = [...props.hashtags, hash];
+    copied = copied.filter((item, index) => copied.indexOf(item) === index);
+    props.setHashtags(copied);
+  }
+
   return (
     <JobWrapper new={props.job.new} featured={props.job.featured}>
       <section className="section1">
@@ -25,13 +31,43 @@ const Jobs = (props: JobPropsType) => {
         </div>
       </section>
       <section className="section2">
-        <p>{props.job.role}</p>
-        <p>{props.job.level}</p>
+        <p
+          onClick={() => {
+            addHash(props.job.role);
+          }}
+        >
+          {props.job.role}
+        </p>
+        <p
+          onClick={() => {
+            addHash(props.job.level);
+          }}
+        >
+          {props.job.level}
+        </p>
         {props.job.languages.map((language: String) => {
-          return <p>{language}</p>;
+          return (
+            <p
+              key={props.job.languages.indexOf(language)}
+              onClick={() => {
+                addHash(language);
+              }}
+            >
+              {language}
+            </p>
+          );
         })}
         {props.job.tools.map((tool: String) => {
-          return <p>{tool}</p>;
+          return (
+            <p
+              key={props.job.tools.indexOf(tool)}
+              onClick={() => {
+                addHash(tool);
+              }}
+            >
+              {tool}
+            </p>
+          );
         })}
       </section>
     </JobWrapper>
