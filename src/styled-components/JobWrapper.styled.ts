@@ -27,10 +27,10 @@ const JobWrapper = styled.div`
     width: 40px;
     margin-top: -20px;
 
-    @media(min-width: 1300px) {
-        width: 88px;
-        height: 88px;
-        margin-top: 0px;
+    @media (min-width: 1300px) {
+      width: 88px;
+      height: 88px;
+      margin-top: 0px;
     }
   }
   .section1 {
@@ -78,8 +78,6 @@ const JobWrapper = styled.div`
       font-weight: 700;
       cursor: pointer;
 
-    
-
       &:hover {
         color: #5ca5a5;
       }
@@ -109,10 +107,9 @@ const JobWrapper = styled.div`
     color: #5ca5a5;
     font-weight: 700;
 
-    
-    @media(min-width: 1300px) {
-        margin-left: 263px;
-      }
+    @media (min-width: 1300px) {
+      margin-left: 263px;
+    }
 
     p {
       margin-top: 16px;

@@ -1,6 +1,6 @@
 import { JobWrapper } from "../styled-components";
 import { useState } from "react";
-
+import { JobPropsType } from "../react-app-env";
 const Jobs = (props: JobPropsType) => {
   function addHash(hash: String) {
     let copied = [...props.hashtags, hash];
@@ -10,8 +10,8 @@ const Jobs = (props: JobPropsType) => {
 
   return (
     <JobWrapper new={props.job.new} featured={props.job.featured}>
-        <img src={process.env.PUBLIC_URL + props.job.logo} />
-      
+      <img src={process.env.PUBLIC_URL + props.job.logo} />
+
       <section className="section1">
         <div className="for-flex1">
           <p className="company">{props.job.company}</p>

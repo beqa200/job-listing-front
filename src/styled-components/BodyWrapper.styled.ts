@@ -18,6 +18,7 @@ const BodyWrapper = styled.div`
     background-color: white;
     margin: -10px auto 56px;
     border-radius: 5px;
+    box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
     width: calc(90% - 48px);
     max-width: 1110px;
     padding: 20px 24px 0px;
@@ -41,7 +42,6 @@ const BodyWrapper = styled.div`
           background-color: rgba(92, 165, 165, 0.1);
           border-top-left-radius: 4px;
           border-bottom-left-radius: 4px;
-
         }
       }
 
@@ -53,8 +53,8 @@ const BodyWrapper = styled.div`
         cursor: pointer;
 
         &:hover {
-        background-color: #2B3939;
-    }
+          background-color: #2b3939;
+        }
       }
     }
   }
@@ -66,10 +66,9 @@ const BodyWrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-        color: #5CA5A5;
-        text-decoration: underline;
+      color: #5ca5a5;
+      text-decoration: underline;
     }
-   
   }
 `;
 

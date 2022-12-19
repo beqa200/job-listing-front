@@ -4,9 +4,9 @@ import { Job } from "./components";
 import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
-
+import { DataType } from "./react-app-env";
 function App() {
-  const [data, setData] = useState<any>();
+  const [data, setData] = useState<DataType[]>();
   const [hashtags, setHashtags] = useState<String[]>([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function App() {
         <div className="hash-wrapper">
           {hashtags?.map((hashtag: String) => {
             return (
-              <div className="hash">
+              <div className="hash" key={Math.random() * Math.random()}>
                 <p>{hashtag}</p>
                 <img
                   src={process.env.PUBLIC_URL + "/images/icon-remove.svg"}
@@ -79,7 +79,6 @@ function App() {
               }
             }
           }
-          console.log(job.count);
           if (job.count == hashtags.length) {
             return (
               <Job
